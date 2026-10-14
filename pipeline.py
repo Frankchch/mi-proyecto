@@ -23,4 +23,4 @@ def calcular_total(datos, con_iva=True):
 if __name__ == "__main__":
     datos = extraer_datos()
     total = calcular_total(datos)
-    print(f"Total de ventas (con IVA): {total:,.2f} €")
+    print(f"Total de ventas (con IVA): {total:,.1f} €")
