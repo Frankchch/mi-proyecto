@@ -20,7 +20,13 @@ def calcular_total(datos, con_iva=True):
         total += calcular_iva(total)
     return total
 
+def aplicar_descuento(total, descuento=0.1):
+    """Aplica un descuento al total."""
+    if total > 10000:
+        return total * (1 - descuento)
+    return total
+
 if __name__ == "__main__":
     datos = extraer_datos()
-    total = calcular_total(datos)
+    total = aplicar_descuento(calcular_total(datos))
     print(f"Total de ventas (con IVA): {total:,.1f} €")
